@@ -24,7 +24,9 @@ public class LevelProgress : MonoBehaviour
     {
         storedFillAmount += barIncreaseValue / 100f;
 
-        fillBar.DOFillAmount(storedFillAmount, fillTime).startValue = (storedFillAmount - barIncreaseValue / 100f);
+        var twen = fillBar.DOFillAmount(storedFillAmount, fillTime);
+        twen.startValue = (storedFillAmount - barIncreaseValue / 100f);
+        twen.SetEase(Ease.Linear);
         var iconPos = icon.transform.localPosition;
         if (iconPos.x >= 670)
             return;
