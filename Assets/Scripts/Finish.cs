@@ -7,8 +7,10 @@ public class Finish : MonoBehaviour
 {
     public List<GameObject> finishParticles = new List<GameObject>();
     public GameObject successPanel;
+    public GameObject music;
     public ArcadeKart arcadeKart;
     public Rigidbody carRB;
+
     private void OnTriggerEnter(Collider other)
     {
         CheckPointCollisionHandler kart;
@@ -18,7 +20,7 @@ public class Finish : MonoBehaviour
             {
                 finishParticles[i].SetActive(true);
             }
-
+            music.SetActive(false);
             StartCoroutine(EnableEndPanel());
         }
     }

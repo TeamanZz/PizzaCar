@@ -5,6 +5,7 @@ using UnityEngine;
 public class Egg : MonoBehaviour
 {
     public GameObject crackedEggPrefab;
+    public Rigidbody eggRB;
     private void OnCollisionEnter(Collision other)
     {
         Terrain terrain;
@@ -14,5 +15,9 @@ public class Egg : MonoBehaviour
             var crackedEgg = Instantiate(crackedEggPrefab, transform.position, Quaternion.Euler(0, Random.Range(0, 360), 0), EggSpawner.Instance.crackedEggsContainer);
             Destroy(gameObject);
         }
+    }
+    private void FixedUpdate()
+    {
+        eggRB.AddForce(Vector3.down * eggRB.mass);
     }
 }
