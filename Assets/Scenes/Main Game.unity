@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 300852443}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9f5c48c4ec012de40a56d92f985972ba,
+    type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 137f4fec2e1a3094da7b54ded94eb0fd,
     type: 2}
 --- !u!196 &4
@@ -1596,7 +1597,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: 2
+    m_Resolution: 1
     m_CustomResolution: -1
     m_Strength: 0.638
     m_Bias: 0
@@ -1623,18 +1624,18 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3057,6 +3058,7 @@ GameObject:
   - component: {fileID: 622845357}
   - component: {fileID: 622845359}
   - component: {fileID: 622845358}
+  - component: {fileID: 622845360}
   m_Layer: 0
   m_Name: New_Terrain
   m_TagString: Untagged
@@ -3088,7 +3090,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 2b7bbcb38cd3f5146aad99d63754f7dc, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &622845359
 Terrain:
   m_ObjectHideFlags: 0
@@ -3122,6 +3124,18 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!114 &622845360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622845356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d9937ed3d88b3438260a7bdb5879ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &624436510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013779684110, guid: 15cf8c13b0c302746a6e3eb78510226d,
@@ -74664,8 +74678,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    TopSpeed: 8
-    Acceleration: 7
+    TopSpeed: 7
+    Acceleration: 6
     ReverseSpeed: 10
     ReverseAcceleration: 3
     AccelerationCurve: 0.5
@@ -76214,7 +76228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.11999512, y: 0}
+  m_AnchoredPosition: {x: 0.12011719, y: 0}
   m_SizeDelta: {x: 1080, y: 2280}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &8170153792994097570
