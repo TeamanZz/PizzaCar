@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameAnalyticsSDK;
-using Facebook.Unity;
+// using Facebook.Unity;
 
 public class SDKImplement : MonoBehaviour
 {
